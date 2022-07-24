@@ -20,12 +20,12 @@ body {
 
 .game {
   position: relative;
-  width: 50%;
-  height: 95%;
+  width: 100%;
+  height: 100%;
   overflow: hidden;
   background-image: url("./images/background.png");
-  background-position: bottom;
-  background-size: cover;
+  background-position: center;
+  background-size: contain;
   background-repeat: repeat-x;
   animation: background-move 15s linear infinite;
   z-index: -2;
@@ -33,7 +33,7 @@ body {
 
 @keyframes background-move {
   100% {
-    background-position-x: -100vw;
+    background-position-x: -98.5vw;
   }
 }
 
@@ -42,7 +42,7 @@ body {
   width: calc(111px / 3);
   height: 32px;
   top: 50%;
-  left: 50%;
+  left: 20%;
   transform: translate(-50%, -50%) scale(4);
   background-image: url(./images/css_sprites.png);
   background-size: cover;
@@ -215,7 +215,6 @@ body {
   top: 0;
   right: 0;
   width: 90px;
-  height: 500px;
   background-image: url("./images/barrier-top.png");
   background-position: bottom;
   background-repeat: no-repeat;
@@ -228,7 +227,6 @@ body {
   bottom: 0;
   right: -120px;
   width: 90px;
-  height: 50px;
   background-image: url("./images/barrier-bottom.png");
   background-position: top;
   background-repeat: no-repeat;

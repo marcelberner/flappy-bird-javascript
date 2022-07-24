@@ -63,11 +63,11 @@ class Game {
         const Offsets = barrier.getTopBarrierOffsets();
         if (
           (this.birdPosition.offsetTop <= Offsets[0] &&
-            window.innerWidth / 2 - this.birdPosition.offsetLeft >= Offsets[1] &&
-            window.innerWidth / 2 - this.birdPosition.offsetLeft <= Offsets[2]) ||
-          (window.innerHeight * 0.95 - this.birdPosition.offsetTop <= Offsets[3] &&
-            window.innerWidth / 2 - this.birdPosition.offsetLeft > Offsets[4] &&
-            window.innerWidth / 2 - this.birdPosition.offsetLeft <= Offsets[5])
+            this.birdPosition.offsetLeft + 111/3 >= Offsets[1] &&
+            this.birdPosition.offsetLeft + 111/3 <= Offsets[2]) ||
+          (window.innerHeight - this.birdPosition.offsetTop <= Offsets[3] &&
+            this.birdPosition.offsetLeft + 111/3 > Offsets[4] &&
+            this.birdPosition.offsetLeft + 111/3 <= Offsets[5])
         )
           this.endgame();
       });
@@ -81,7 +81,7 @@ class Game {
       this.barriersArray.forEach((barrier) => {
         if (!barrier.passed) {
           const Offsets = barrier.getTopBarrierOffsets();
-          if (window.innerWidth / 2 - this.birdPosition.offsetLeft >= Offsets[2]) {
+          if (this.birdPosition.offsetLeft >= Offsets[2]) {
             messages.increseScore();
             barrier.passed = true;
           }

@@ -52,7 +52,7 @@ export class Barriers {
       this.currentPosition += 1;
       this.bottomBarrier.style.right = `${this.currentPosition}px`;
       this.topBarrier.style.right = `${this.currentPosition}px`;
-      if (this.currentPosition > window.innerWidth * 0.5 + 50) this.barrierRemove();
+      if (this.currentPosition > window.innerWidth) this.barrierRemove();
     }, 10);
   }
 
