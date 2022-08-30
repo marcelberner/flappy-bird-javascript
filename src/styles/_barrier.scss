@@ -1,0 +1,19 @@
+.barrier {
+  position: absolute;
+  width: var(--barrier-width);
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 3;
+  &--top {
+    top: 0;
+    right: 0;
+    background-image: var(--barrier-top-img);
+    background-position: bottom;
+  }
+  &--bottom {
+    bottom: 0;
+    right: 0;
+    background-image: var(--barrier-bottom-img);
+    background-position: top;
+  }
+}

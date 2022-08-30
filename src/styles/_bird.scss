@@ -1,0 +1,39 @@
+@import "./mixins.scss";
+@import "./variables.scss";
+
+.bird {
+  position: absolute;
+  width: var(--bird-width);
+  height: var(--bird-height);
+  background-image: var(--bird-img);
+  left: calc(50% - var(--bird-width) / 2);
+  transform: rotate(20deg);
+  background-size: cover;
+  transition: 0.2s;
+  z-index: 2;
+  top: 50%;
+  @include media($tablet) {
+    left: 15%;
+  }
+  &--animate {
+    animation: bird-flap-menu 0.5s alternate infinite,
+      bird-move 0.5s steps(3) alternate infinite;
+  }
+}
+
+.bird-flap {
+  transform: rotate(-30deg);
+  animation: bird-move 0.5s steps(3) normal;
+}
+
+@keyframes bird-flap-menu {
+  100% {
+    transform: translate(0, -80px) rotate(-30deg);
+  }
+}
+
+@keyframes bird-move {
+  100% {
+    background-position-x: calc(var(--bird-width) * 3);
+  }
+}

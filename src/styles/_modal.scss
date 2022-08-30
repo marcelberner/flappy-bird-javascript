@@ -1,0 +1,128 @@
+@import "./mixins.scss";
+@import "./variables.scss";
+
+.modal {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  &__title {
+    width: var(--title-width);
+    max-width: var(--modal-max-width);
+    min-width: var(--modal-min-width);
+    height: var(--title-height);
+    margin: var(--title-margin);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    &--menu {
+      background-image: var(--title-menu-img);
+      animation: bouncing-text 0.7s linear alternate infinite;
+    }
+    &--over {
+      background-image: var(--title-over-img);
+    }
+  }
+}
+
+@keyframes bouncing-text {
+  100% {
+    transform: scale(0.95);
+  }
+}
+
+.score {
+  position: absolute;
+  font-size: var(--score-font-size);
+  color: white;
+  text-align: center;
+  padding-top: var(--score-padding);
+  width: 100%;
+  z-index: 5;
+}
+
+.tap-icon {
+  position: absolute;
+  bottom: var(--tap-bottom);
+  width: var(--tap-width);
+  max-width: var(--tap-max-width);
+  min-width: var(--tap-min-width);
+  height: var(--tap-height);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  &--right {
+    left: calc(var(--tap-arrow-offset) + 8%);
+    background-image: var(--tap-icon-right);
+    animation: tap-right-move 0.5s 0.17s alternate infinite;
+  }
+  &--left {
+    right: calc(var(--tap-arrow-offset) + 8%);
+    background-image: var(--tap-icon-left);
+    animation: tap-left-move 0.5s 0.17s alternate infinite;
+  }
+  &--middle {
+    right: 50%;
+    transform: translate(50%, 50%);
+    background-image: var(--tap-icon-middle);
+    animation: tap-main-move 0.5s 0.17s alternate infinite;
+  }
+}
+
+@keyframes tap-right-move {
+  100% {
+    left: var(--tap-arrow-offset);
+  }
+}
+
+@keyframes tap-left-move {
+  100% {
+    right: var(--tap-arrow-offset);
+  }
+}
+
+@keyframes tap-main-move {
+  40% {
+    transform: translate(50%, 35%) scale(0.9);
+  }
+  100% {
+    transform: translate(50%, 35%) scale(0.9);
+  }
+}
+
+.result {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  color: var(--result-color);
+  width: var(--result-width);
+  max-width: var(--modal-max-width);
+  min-width: var(--modal-min-width);
+  left: 50%;
+  top: 50%;
+  font-size: var(--result-font-size);
+  transform: translate(-50%, -50%);
+  background-image: var(--result-img);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  aspect-ratio: 2/1;
+  &__score {
+    position: absolute;
+    right: 10%;
+    @include media($tablet) {
+      font-size: 7rem;
+    }
+    @include media($smartphone-large) {
+      font-size: 5rem;
+    }
+  }
+  & [data-final-score] {
+    top: 25%;
+  }
+
+  & [data-best-score] {
+    bottom: 15%;
+  }
+}

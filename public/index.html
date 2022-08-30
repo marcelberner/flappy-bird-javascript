@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Flaappy Bird</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div class="game">
+      <div class="score hide" data-score>0</div>
+      <div class="bird bird--animate"></div>
+      <div class="modal modal--menu">
+        <div class="modal__title modal__title--menu"></div>
+        <div class="tap-icon tap-icon--left"></div>
+        <div class="tap-icon tap-icon--middle"></div>
+        <div class="tap-icon tap-icon--right"></div>
+      </div>
+      <div class="modal modal--over hide">
+        <div class="modal__title modal__title--over"></div>
+        <div class="result">
+          <span class="result__score" data-final-score>0</span>
+          <span class="result__score" data-best-score>0</span>
+        </div>
+      </div>
+      <div class="ground"></div>
+    </div>
+  </body>
+</html>

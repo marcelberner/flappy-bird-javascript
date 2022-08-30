@@ -1,0 +1,37 @@
+@import "./styles/variables";
+@import "./styles/barrier";
+@import "./styles/bird";
+@import "./styles/game";
+@import "./styles/modal";
+@import "./styles/mixins";
+
+@font-face {
+  font-family: "FLAPPY-BIRD-FONT";
+  src: url("./assets/flappy-bird.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 10px;
+  @include media($tablet) {
+    font-size: 8px;
+  }
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "FLAPPY-BIRD-FONT";
+  user-select: none;
+  height: 100vh;
+}
+
+.hide {
+  display: none;
+}

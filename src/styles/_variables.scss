@@ -1,0 +1,50 @@
+:root {
+  // barriers
+  --barrier-width: 15rem;
+  --barrier-top-img: url("../assets/barrier-top.png");
+  --barrier-bottom-img: url("../assets/barrier-bottom.png");
+  // bird
+  --bird-width: calc(11.1rem * 6 / 3);
+  --bird-height: calc(3.2rem * 6);
+  --bird-img: url("../assets/bird.png");
+
+  // modal
+  --modal-max-width: 60rem;
+  --modal-min-width: 30rem;
+  --title-width: 60%;
+  --title-height: 15%;
+  --title-margin: 50px auto;
+  --title-menu-img: url("../assets/title-text.png");
+  --title-over-img: url("../assets/game-over-text.png");
+
+  --score-font-size: 15rem;
+  --score-padding: 10rem;
+
+  --tap-bottom: 20%;
+  --tap-width: 10%;
+  --tap-max-width: 20rem;
+  --tap-min-width: 9rem;
+  --tap-height: 7%;
+  --tap-arrow-offset: 54%;
+  --tap-icon-left: url("../assets/tap-icon-right.png");
+  --tap-icon-right: url("../assets/tap-icon-left.png");
+  --tap-icon-middle: url("../assets/pointer.png");
+
+  --result-color:  rgba(255, 123, 100, 0.836);
+  --result-width:70%;
+  --result-font-size: 10rem;
+  --result-img:url("../assets/result.png");
+
+  // game
+  --bg-img: url("../assets/background.png");
+  --ground-img: url("../assets/ground.png");
+  --ground-height: 7rem;
+}
+
+$smartphone: 460px;
+$smartphone-large: 640px;
+$tablet: 800px;
+$tablet-large: 1024px;
+$desktop-small: 1280px;
+$desktop-medium: 1600px;
+$desktop-large: 1900px;
