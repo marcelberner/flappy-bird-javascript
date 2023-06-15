@@ -2,6 +2,9 @@
 
 Once a world-famous mobile game, the main goal of which is to beat the highest record possible by avoiding incoming pipes.
 
+### Live demo
+You can find live demo [here](https://flappy-bird-js.web.app)
+
 ## Getting Started
 
 ### Dependencies
